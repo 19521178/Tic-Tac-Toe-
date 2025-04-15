@@ -1,5 +1,5 @@
-import React, { useState } from 'react';
-import './TicTacToe.css'; // Optional: for styling
+import React, { useState } from "react";
+import "./TicTacToe.css"; // Optional: for styling
 
 const TicTacToe = () => {
   const [board, setBoard] = useState(Array(9).fill(null));
@@ -7,9 +7,9 @@ const TicTacToe = () => {
   const winner = calculateWinner(board);
 
   const handleClick = (index) => {
-    if (board[index] || winner) return; 
+    if (board[index] || winner) return;
     const newBoard = board.slice();
-    newBoard[index] = isXNext ? 'X' : 'O';
+    newBoard[index] = isXNext ? "X" : "O";
     setBoard(newBoard);
     setIsXNext(!isXNext);
   };
@@ -28,7 +28,7 @@ const TicTacToe = () => {
   return (
     <div className="game">
       <div className="status">
-        {winner ? `Winner: ${winner}` : `Next player: ${isXNext ? 'X' : 'O'}`}
+        {winner ? `Winner: ${winner}` : `Nextt player: ${isXNext ? "X" : "O"}`}
       </div>
       <div className="board">
         <div className="board-row">
@@ -47,7 +47,9 @@ const TicTacToe = () => {
           {renderSquare(8)}
         </div>
       </div>
-      <button className="reset" onClick={resetGame}>Reset Game</button>
+      <button className="reset" onClick={resetGame}>
+        Reset Game
+      </button>
     </div>
   );
 };
@@ -71,4 +73,4 @@ const calculateWinner = (squares) => {
   }
   return null;
 };
-export default TicTacToe
+export default TicTacToe;
