@@ -28,7 +28,7 @@ const TicTacToe = () => {
   return (
     <div className="game">
       <div className="status">
-        {winner ? `Winner: ${winner}` : `Nextt player: ${isXNext ? "X" : "O"}`}
+        {winner ? `Winner: ${winner}` : `Nexttt player: ${isXNext ? "X" : "O"}`}
       </div>
       <div className="board">
         <div className="board-row">
