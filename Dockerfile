@@ -13,7 +13,7 @@ RUN npm run build
 
 
 
-FROM ubuntu/nginx as serve
+FROM --platform=linux/amd64 ubuntu/nginx as serve
 
 COPY nginx.conf /etc/nginx/conf.d/default.conf
 COPY --from=build /usr/app/build /usr/share/nginx/html/
